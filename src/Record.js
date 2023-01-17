@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState}  from 'react'
 import List from './List'
+
 
 function Record(props) {
     const [record,Setrecord] = useState([]);
@@ -17,7 +18,7 @@ function Record(props) {
       }).catch(err=>console.log(err));
     };
 
-    useEffect(()=>{
+    useEffect(()=>{ 
       Setrecord(props.element);
     },[props.element]);
 
@@ -29,7 +30,7 @@ function Record(props) {
     },[amounts, income, expense, incomes, expenses, props])
 
   return (
-    <div>
+    <div>      
         {record.map(element=><List key={element._id} element={element} sentid={(e)=>props.sentid(e)} sentdel={del}/>)}
     </div>
   )
