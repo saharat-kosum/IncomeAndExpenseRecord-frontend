@@ -18,7 +18,7 @@ function Record(props) {
     };
 
     useEffect(()=>{
-      Setrecord(props.element)
+      Setrecord(props.element);
     },[props.element]);
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ function Record(props) {
       setExpense(expenses);
       props.sentincome(income);
       props.sentexpense(expense);
-    },[amounts])
+    },[amounts, income, expense, incomes, expenses, props])
 
   return (
     <div>
