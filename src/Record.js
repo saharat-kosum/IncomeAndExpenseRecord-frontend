@@ -12,7 +12,7 @@ function Record(props) {
     const expenses = amounts.filter(e=>e<0).reduce((total,element)=>total+=element,0);
 
     const del = (e)=>{
-      axios.post('https://incomeandexpenserecord-backend.onrender.com/delete',{id:e.id})
+      axios.post('https://incomeandexpenserecord-backend-production.up.railway.app/delete',{id:e.id})
       .then((res)=>{
         Setrecord(res.data);
       }).catch(err=>console.log(err));

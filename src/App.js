@@ -14,7 +14,7 @@ function App() {
   const [isLoading,setIsLoading] = useState(true);
 
   useEffect(()=>{
-    axios.get('https://incomeandexpenserecord-backend.onrender.com')
+    axios.get('https://incomeandexpenserecord-backend-production.up.railway.app/')
     .then((res)=>{
       Setdata(res.data);
       setIsLoading(false);})

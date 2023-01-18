@@ -20,7 +20,7 @@ function Form(props) {
     const addRecord = ()=>{
         if(text&&amount){
             if(isUpdate){
-                axios.post('https://incomeandexpenserecord-backend.onrender.com/update',{text,amount,id})
+                axios.post('https://incomeandexpenserecord-backend-production.up.railway.app/update',{text,amount,id})
                 .then((res)=>{
                     Settext('');
                     Setamount('');
@@ -29,7 +29,7 @@ function Form(props) {
                 }).catch(err=>console.log(err));
             }
             else{            
-                axios.post('https://incomeandexpenserecord-backend.onrender.com/save',{text,amount})
+                axios.post('https://incomeandexpenserecord-backend-production.up.railway.app/save',{text,amount})
                 .then((res)=>{
                     Settext('');
                     Setamount('');
